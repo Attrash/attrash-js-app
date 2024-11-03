@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
     getAll: getAll,
   };
 })();
-let allPokemon = pokemonRepository.getAll();
+const allPokemon = pokemonRepository.getAll();
 allPokemon.forEach(displayPokemon);
 
 function displayPokemon(pokemon) {
