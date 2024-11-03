@@ -3,8 +3,9 @@ let pokemonList = [
   { name: 'Jolteon', height: 2.07, types: ['electric'] },
   { name: 'Vaporeon', height: 3.03, types: ['water'] },
 ];
-for (let i = 0; i < pokemonList.length; i++){
-  let pokemon = pokemonList[i];
-  document.write(`${pokemon.name} (height: ${pokemon.height}) ${pokemon.height > 3 ? ' - Wow that\'s big!!' : ''}<br>`);
-  
-}
+pokemonList.forEach(displayPokemon);
+
+  function displayPokemon(pokemon){
+  document.write(`${pokemon.name} (height: ${pokemon.height}) ${pokemon.height > 3 ? ' - Wow that\'s big!!' : ''}<br>`)
+  }
+
