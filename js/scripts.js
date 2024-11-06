@@ -11,14 +11,34 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+  function addListitem(pokemon) {
+      let pokemonList = document.querySelector('.pokemon-list');
+      let listItem = document.createElement('li');
+      let button = document.createElement('button');
+      button.textContent = pokemon.name;
+      button.classList.add('button');
+      listItem.appendChild(button);
+      pokemonList.appendChild(listItem);
+      button.addEventListener('click', () => {
+        showDetails(pokemon);
+      }) 
+  }
+  function showDetails(pokemon){
+    console.log(pokemon);
+  }
   return {
     add: add,
     getAll: getAll,
+    addListitem: addListitem,
+    showDetails: showDetails,
   };
 })();
 const allPokemon = pokemonRepository.getAll();
-allPokemon.forEach(displayPokemon);
+  allPokemon.forEach( pokemon => {
+    pokemonRepository.addListitem(pokemon);
+  })
 
-function displayPokemon(pokemon) {
-  document.write(`${pokemon.name} ${pokemon.height} ${pokemon.types} <br>`);
-}
+
+
+
+
