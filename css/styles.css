@@ -1,4 +1,4 @@
-html, 
+/* html, 
 body {
   font-family: Arial, sans-serif;
 }
@@ -17,13 +17,13 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   
-  /* to show it above other content */
+ 
   z-index: 999; 
   
-  /* to allow scrolling if the screen is not high enough*/
+
   overflow: auto; 
   
-  /* this is used to center the modal */
+ 
   display: grid;
   text-align: center;
 }
@@ -54,4 +54,4 @@ body {
 
 .modal p {
   margin-bottom: 0;
-}
+} */
